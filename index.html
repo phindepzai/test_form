@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Phin's Test</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: rgb(230, 224, 224) !important;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .font-20 {
+      font-size: 20px !important;
+    }
+
+    .color-blue {
+      color: #64c5da !important;
+    }
+
+    .bg-blue {
+      background-color: #64c5da !important;
+    }
+
+    .border-card-header {
+      border-bottom: 4px solid #41454c !important;
+    }
+
+    .title {
+      font-size: 55px !important;
+    }
+
+    .border-radius-10 {
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row pt-5 mt-5 pb-5">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <div class="card border-radius-10">
+          <div class="card-header border-card-header bg-transparent">
+            <h1 class="text-center color-blue title">FREEMIND</h1>
+            <p class="text-center m-0 font-weight-bolder font-20">Hãy gửi CV của bạn cho chúng tôi</p>
+          </div>
+          <div class="card-body">
+            <form class="mt-4" id="form">
+              <div class="form-group row">
+                <label for="name" class="col-lg-2 col-form-label font-weight-bolder pr-0">Tên của bạn</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control text" name="name" placeholder="Ví dụ: Nguyễn Văn A">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="phone" class="col-lg-2 col-form-label font-weight-bolder pr-0">Số điện thoại</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control text" name="phone" placeholder="Số điện thoại liên lạc">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="position" class="col-lg-2 col-form-label font-weight-bolder pr-0">Vị trí</label>
+                <div class="col-lg-10">
+                  <select name="position" id="position" class="custom-select">
+                    <option value="intern">Intern</option>
+                    <option value="fresher">Fresher</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="exp" class="col-lg-2 col-form-label font-weight-bolder pr-0">Kinh nghiệm làm việc</label>
+                <div class="col-lg-10">
+                  <textarea name="exp" rows="8" class="form-control text" style="resize: none;"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                  <input onchange="handleChange(event)" type="file" accept=".jpg,.png" name="image" id="inputFile"
+                    hidden>
+                  <img onclick="document.getElementById('inputFile').click()"
+                    style="width:18px;height:18px;cursor: pointer;"
+                    src="https://banner2.cleanpng.com/20190206/apu/kisspng-email-attachment-computer-icons-computer-file-clip-enclosure-svg-png-icon-free-download-263193-o-5c5bbb08985a23.821296561549515528624.jpg"
+                    alt="">
+                  Đính kèm hình ảnh
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10" id="picture-warn">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="email" class="col-lg-2 col-form-label font-weight-bolder pr-0">Email</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control text" name="email" placeholder="Ví dụ: contact@freemind.vn">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10" id="success">
+                </div>
+              </div>
+              <div class="form-group row mt-4">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                  <button type="submit" class="btn btn-primary bg-blue btn-block border-0">Gửi CV cho Freemind</button>
+                </div>
+                <div class="col-lg-2"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+    integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="index.js">
+  </script>
+</body>
+
+</html>
