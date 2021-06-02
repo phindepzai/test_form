@@ -12,7 +12,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
     body {
-      background-color: rgb(230, 224, 224) !important;
+      background-color: #E5E5E5 !important;
     }
 
     .card {
@@ -61,12 +61,18 @@
                 <label for="name" class="col-lg-2 col-form-label font-weight-bolder pr-0">Tên của bạn</label>
                 <div class="col-lg-10">
                   <input type="text" class="form-control text" name="name" placeholder="Ví dụ: Nguyễn Văn A">
+                  <div class="invalid-feedback">
+                    Vui lòng nhập đúng tên!
+                  </div>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="phone" class="col-lg-2 col-form-label font-weight-bolder pr-0">Số điện thoại</label>
                 <div class="col-lg-10">
                   <input type="text" class="form-control text" name="phone" placeholder="Số điện thoại liên lạc">
+                  <div class="invalid-feedback">
+                    Vui lòng nhập đúng số điện thoại!
+                  </div>
                 </div>
               </div>
               <div class="form-group row">
@@ -107,6 +113,9 @@
                 <label for="email" class="col-lg-2 col-form-label font-weight-bolder pr-0">Email</label>
                 <div class="col-lg-10">
                   <input type="text" class="form-control text" name="email" placeholder="Ví dụ: contact@freemind.vn">
+                  <div class="invalid-feedback">
+                    Vui lòng nhập đúng email!
+                  </div>
                 </div>
               </div>
               <div class="form-group row">
