@@ -109,9 +109,18 @@ $('#form').submit((e) => {
       type: "POST",
       data: JSON.stringify(e),
       contentType: "application/json",
-      success: function () {
+      success: function (data) {
+        console.log(data);
         const h = '<div class="text-success"> Đã gửi CV thành công! </div>';
         $('#success').html(h);
+        $('#form').trigger("reset");
+        $('.is-valid').removeClass('is-valid');
+        name = '';
+        phone = '';
+        position = 'intern';
+        exp = '';
+        picture = '';
+        email = '';
       }
     });
   }
